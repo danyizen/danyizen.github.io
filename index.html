@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- if Glitch: <link rel="icon" href="https://glitch.com/favicon.ico" /> -->
+    
+    <title>Books Gacha Machines by danyiz</title>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    
+    <link rel="stylesheet" href="/style.css" />
+    
+  </head>
+  <body>
+    <div class="title">
+        <header>📚BOOKS GACHA MACHINE</header>
+        <p>🥁This week NYT Best Seller presents...🥁</p>
+    </div>
+    <div class="container">
+        <div class="sprite-sheet">
+          <canvas width="469" height="681"></canvas>
+        </div>
+        <div class="interactive-area">
+            <div class="dropdown">
+              <label class="genre-header" for="genre">Select Your Genre</label>
+              <select name="genre" id="genre">
+                <option value="combined-print-fiction">Fiction</option>
+                <option value="combined-print-nonfiction">Nonfiction</option>
+                <option value="humor">Humor</option>
+                <option value="picture-books">Picture Books</option>
+                <option value="games-and-activities">Games and Activities</option>
+                <option value="graphic-books-and-manga">Graphic Books and Manga</option>
+                <option value="race-and-civil-rights">Race and Civil Rights</option>
+              </select>
+            </div>
+            <button id="gacha" data="GACHA"></button>
+        </div>
+    </div>
+    <div class="footer">
+      <span>Made by danyiz</span>
+      <span>Have fun with your gacha!</span>
+    </div>
+    <script type="module" src="/script.js"></script>
+    <script type="module" src="/animation.js" defer></script>
+    <script type="module" src="/result-p5.js" defer></script>
+  </body>
+</html>

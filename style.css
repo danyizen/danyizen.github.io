@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background: linear-gradient(360deg, #C1ECE6 0%, #FDFDED 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    display: flex
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 0px 0px;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.title header {
+    font-family: 'Xirod', 'Garamond'; /* import fonts in assest? */
+    font-size: 48px;
+    line-height: 48px;
+    color: #f24429; /*EB503B*/
+}
+
+.title p {  
+    font-family: 'Nasalization', 'Garamond'; /* import fonts in assest? */
+    font-size: 32px;
+    line-height: 32px;
+    color: #039455; /* 0A935C */
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* background: #039455; */
+    margin: 0px 30px 30px 30px;
+    padding: 30px 30px 0px 30px;
+    height: auto;
+}
+
+canvas {
+    border: 2px outset #f24429;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.sprite-sheet {
+    /* background:#C1ECE6; */
+    margin: 0px 0px 50px 0px;
+}
+
+.interactive-area {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    /* background:#C1ECE6; */
+    /* margin: 0px 0px 50px 0px; */
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.genre-header {
+    margin: 20px 10px;
+    font-family: 'Nasalization', 'Garamond';
+    font-size: 24px;
+    line-height: 20px;
+    color: #1B0C66;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+#genre {
+    min-width: 300px;
+    margin: 0px 10px;
+    font-family: 'Nasalization', 'Garamond';
+    font-size: 16px;
+    line-height: 30px;
+    text-align:center;
+    color: #FFF5F5;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(32, 28, 151, 0.75),rgb(51, 5, 86, 0.75));
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+} /* what's the white stroke? */
+
+button {
+    width: 150px;
+    height: 45px;
+    border: none;
+    outline: none;
+    position: relative;
+    margin: 100px 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: linear-gradient(25deg, #EB503B,#F1C85D);
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    background-color: #039455;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 200ms
+}
+
+button::after {
+    content: attr(data);
+    font-family: 'Xirod', 'Garamond';
+    font-size: 18px;
+    color:#FFD516;
+    transition: 200ms
+}
+
+button:hover::before {
+    background: linear-gradient(to right, rgb(32, 28, 151, 0.75),rgb(51, 5, 86, 0.75));
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.15));
+}
+
+button:hover::after{
+    color: #FFD516;
+  }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer span {
+    font-family: 'Nasalization', 'Garamond';
+    font-size: 16px;
+    line-height: 22px;
+    color: #1B0C66;
+}
