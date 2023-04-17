@@ -23,11 +23,9 @@ function animation() {
   };
 
   drawFrame(frameX);
-
   gachaBtn.addEventListener('click', () => {
 
     let spriteCount = 0;
-
 
     function play(){
       drawFrame(spriteCount);
@@ -39,11 +37,11 @@ function animation() {
 
     timerId = setInterval(play, 300);
 
-    function init() {
-      window.requestAnimationFrame(play);
-    };
-
     });
+    
+    function init() {
+      window.requestAnimationFrame(drawFrame(0));
+    };
 
 }
 document.addEventListener('DOMContentLoaded', () => animation());

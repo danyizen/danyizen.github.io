@@ -38,7 +38,7 @@ async function getGenre() {
         listItemJson = ['bad list items'];
     }
     
-    const listItem = localStorage.getItem('NYTListNames'); //?
+    const listItem = localStorage.getItem('NYTListNames'); //getItem is for getting from the storage
     const listItemArray = JSON.parse(listItem);
 
     const youngAdultLists = listItemArray.filter((item,idx) => {
