@@ -92,14 +92,13 @@ canvas {
 
 button {
     width: 150px;
-    height: 45px;
+    height: 65px;
     border: none;
     outline: none;
     position: relative;
-    margin: 100px 10px;
+    margin: 20px 10px;
     padding: 5px 10px;
     border-radius: 8px;
-    background: linear-gradient(25deg, #EB503B,#F1C85D);
     filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.15));
     cursor: pointer;
     z-index: 1;
@@ -138,6 +137,21 @@ button:hover::before {
 button:hover::after{
     color: #FFD516;
   }
+
+
+#gacha {
+    background: linear-gradient(25deg, #EB503B,#F1C85D);
+}
+
+
+#result {
+    margin: 100px;
+    background: linear-gradient(25deg, #675fd4,#55c034);
+}
+
+#result::before {
+    background-color: #EA5B43;
+}
 
 .footer {
     display: flex;
