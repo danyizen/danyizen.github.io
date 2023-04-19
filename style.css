@@ -42,7 +42,7 @@ body {
     height: auto;
 }
 
-canvas {
+#animationCanvas {
     border: 2px outset #f24429;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
 }

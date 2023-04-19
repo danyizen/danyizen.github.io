@@ -18,7 +18,7 @@
     </div>
     <div class="container">
         <div class="sprite-sheet">
-          <canvas width="469" height="681"></canvas>
+          <canvas id='animationCanvas' width="469px" height=""></canvas>
         </div>
         <div class="interactive-area">
             <div class="dropdown">
@@ -36,7 +36,9 @@
             <button id="gacha" data="GACHA"></button>
             <div hidden class="reveal"> <!-- make a div; hide and replace, js + css-->
                 <div class="bookcover-canvas">
-                  <img src="" alt="A 3D rotating book cover">
+                  <canvas id="revealCanvas" width="200px" height="200px">
+                    <img src="" alt="A rotating 3D book cover">
+                  </canvas>
                 </div>  
                 <div class="text">
                   <h1 id="rank">Rank # </h1>

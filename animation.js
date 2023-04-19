@@ -1,5 +1,5 @@
 function animation() {
-  const gachaBtn = document.querySelector('#gacha')
+  const animationBtn = document.querySelector('#gacha')
 
   let img = new Image();
   img.src = 'https://cdn.glitch.global/a8f0b14c-219b-43d1-a0dc-802146a1b8dd/sprite%20sheet.png?v=1681083142128';
@@ -7,7 +7,7 @@ function animation() {
     init();
   };
 
-  let canvas = document.querySelector('canvas');
+  let canvas = document.querySelector('#animationCanvas');
   let ctx = canvas.getContext('2d');
   let timerId;
 
@@ -23,7 +23,7 @@ function animation() {
   };
 
   drawFrame(frameX);
-  gachaBtn.addEventListener('click', () => {
+  animationBtn.addEventListener('click', () => {
 
     let spriteCount = 0;
 
