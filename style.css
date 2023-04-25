@@ -56,8 +56,10 @@ body {
 .interactive-area {
     display: flex;
     flex-direction: column; 
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    height: 681px;
+    width: 470px;
     /* background:#C1ECE6; */
     /* margin: 0px 0px 50px 0px; */
 }
@@ -66,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0px 200px 0px;
+    margin: 20px 0px;
 }
 
 .genre-header {
@@ -93,12 +95,12 @@ body {
 
 button {
     width: 150px;
-    height: 65px;
+    min-height: 65px;
     border: none;
     outline: none;
     position: relative;
-    margin: 20px 20px 100px 20px;
-    padding: 5px 10px;
+    margin: 30px;
+    /* padding: 5px 20px; */
     border-radius: 8px;
     filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.15));
     cursor: pointer;
@@ -122,7 +124,7 @@ button::after {
     content: attr(data);
     font-family: 'Xirod', 'Garamond';
     font-size: 18px;
-    color:#FFD516;
+    color: #FFD516;
     transition: 200ms
 }
 
@@ -155,16 +157,21 @@ button:hover::after{
 } */
 
 .reveal {
+    display: none;   
+    margin: 30px 30px 30px 30px;
+    min-width: 450px;
+    min-height: 300px;
+    max-width: 470px;
+}
+
+.reveal-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     /* flex-wrap: wrap; */
     align-items: center;
-    margin: 0px 30px 30px 30px;
-    padding: 30px 30px 30px 30px;
-    min-width: 450px;
-    min-height: 300px;
-    max-width: 460px;
+    /* moved the canvas margin to .reveal */
+    padding: 15px;
     /* max-height: 700px; */
     background: linear-gradient(30deg, #EB503B 12%, #F1C85D 88%);
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
@@ -189,19 +196,28 @@ button:hover::after{
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
-    margin: 5px;
-    font-size: 18px;
-    color:#1B0C66;
+#rank {
+    margin: 15px;
+    font-size: 20px;
+    color:#590cac;
 }
 
-h2 {
-    margin: 0px;
-    font-size: 16px;
-    color:#007c55;
+#bookname {
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+    color:#066f32;
+}
+
+#author {
+    margin: 2px;
+    text-align: center;
+    font-size: 15px;
+    color:#066f32;
 }
 
 #description {
+    font-size: 16px;
     color: white;
 }
 

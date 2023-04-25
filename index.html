@@ -7,7 +7,7 @@
     
     <title>Books Gacha Machines by danyiz</title>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-    
+    <script src="sketch.js"></script>
     <link rel="stylesheet" href="/style.css" />
     
   </head>
@@ -34,17 +34,17 @@
               </select>
             </div>
             <button id="gacha" data="GACHA"></button>
-            <div hidden class="reveal"> <!-- make a div; hide and replace, js + css-->
-                <div class="bookcover-canvas">
-                  <canvas id="revealCanvas" width="200px" height="200px">
-                    <img src="" alt="A rotating 3D book cover">
-                  </canvas>
-                </div>  
-                <div class="text">
-                  <h1 id="rank">Rank # </h1>
-                  <h2 id="bookname">Book:</h2>
-                  <h2 id="author">Author:</h2>
-                  <p id="description">this is a book about...this is a book about...this is a book about..this is a book about...this is a book about...this is a book about...</p>
+            <div class="reveal" id="reveal"> <!-- make a div; hide and replace, js + css-->
+                <div class="reveal-container">
+                  <div class="bookcover-canvas" id="bookcover-canvas">
+                      <img src="" alt="A rotating 3D book cover">
+                  </div>  
+                  <div class="text">
+                    <h1 id="rank"></h1>
+                    <h2 id="bookname"></h2>
+                    <h3 id="author"></h2>
+                    <p id="description"></p>
+                  </div>
                 </div>
             </div>
               <!-- <button id="result" data="Check Result"></button> backup plan, don't need this right now. Has related css codes, too. take care of them later. --> 
