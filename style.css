@@ -17,7 +17,11 @@ body {
 }
 
 .title header {
-    font-family: 'Xirod', 'Garamond'; /* import fonts in assest? */
+    @font-face {
+        font-family: 'Xirod', 'Garamond'; /* import fonts in assest? */;
+        src: url('xirod.otf');
+    }
+    
     font-size: 48px;
     line-height: 48px;
     color: #f24429; /*EB503B*/
