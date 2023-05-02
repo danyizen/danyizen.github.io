@@ -1,4 +1,4 @@
-const spinContainer = document.querySelector("#spin")
+const spinContainer = document.querySelector("#spin");
 
 // Create a new WebGLRenderer object and set its dimensions
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });

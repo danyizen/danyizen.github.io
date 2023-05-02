@@ -22,11 +22,12 @@ loadBtn.addEventListener('click', async () => {
     console.log("chosenBook", chosenBook)
     
     //mapping
+    document.querySelector("#bookcover-img").src = chosenBook.book_image
     document.querySelector("#rank").innerHTML = "Rank #" + chosenBook.rank
     document.querySelector("#bookname").innerHTML = chosenBook.title
     document.querySelector("#author").innerHTML = chosenBook.author
     document.querySelector("#description").innerHTML = chosenBook.description
-    document.querySelector("#bookcover-img").src = chosenBook.book_image;
+   
 
     //reveal!!!
     document.querySelector("#reveal").style.display = 'block';
