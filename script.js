@@ -24,6 +24,18 @@ async function getGenre() {
     console.table(newList);
 }; */
 
+
+//05/01
+// const apiCall = async(proxyURL,apiURL) =>{
+//     const results = await fetch(proxyURL + apiURL) .then(
+//         (response) => {return response.json()}) 
+//         .catch((error) => { console.error("Error fetching data:", error); });
+//     return results;
+// }
+// const proxyURL = "http://localhost:8080/"; 
+
+
+
 async function getGenre() {
     let data = localStorage.getItem('NYTListNames');
     let GenreListName = JSON.parse(data);
@@ -82,3 +94,61 @@ document.addEventListener("DOMContentLoaded", async () => getGenre()); // the as
 //         encodedGenreName ='combined-print-fiction';
 //         console.log(apiAddress);
 // }    
+
+
+
+
+console.log('fired p5')
+let sketch = function (p5js) {
+    console.log('inside sketch')
+
+    let img2;
+
+    p5js.setup = function () {
+        console.log('set up p5')
+        p5js.createCanvas(200, 200, p5js.WEBGL);
+        p5js.rectMode(p5js.CENTER);
+
+        console.log(chosenBook.book_image)
+        img2 = p5js.createImage(chosenBook.book_image);
+        //img.crossOrigin = "";
+        //p5js.loadImage(); caused CORS so used createImg to bypass.
+
+    };
+
+    p5js.draw = function () {
+        p5js.background(250);
+
+        let locX = p5js.mouseX - p5js.height / 2;
+        let locY = p5js.mouseY - p5js.width / 2;
+
+        p5js.ambientLight(250, 220, 150);
+        p5js.pointLight(255, 255, 255, locX, locY, 100);
+
+        p5js.push();
+        p5js.rotateZ(p5js.frameCount * 0.01);
+        p5js.rotateX(p5js.frameCount * 0.01);
+        p5js.rotateY(p5js.frameCount * 0.01);
+        p5js.texture(img2);
+        p5js.box(330 / 2, 496 / 2, 10);
+        p5js.pop(); //restore
+    };
+
+    p5js.setup()
+    p5js.draw()
+}
+
+// booksData.forEach(element => {
+//     console.log(element.rank, 
+//             element.title, 
+//             element.author, 
+//             element.description, 
+//             element.book_image)    
+// });
+if (window['p5']) {
+    console.log('p5 exists')
+    let myp5 = new p5(sketch, canvas2);
+} else {
+    console.log('p5 not loaded')
+}
+});

@@ -2,14 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- if Glitch: <link rel="icon" href="https://glitch.com/favicon.ico" /> -->
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <title>Books Gacha Machines by danyiz</title>
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-    
-    <link rel="stylesheet" href="/style.css" />
-    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+    <!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
   </head>
   <body>
     <div class="title">
@@ -21,8 +18,8 @@
           <canvas id='animationCanvas' width="469px" height="681"></canvas>
         </div>
         <div class="interactive-area">
-            <div class="dropdown">
-              <label class="genre-header" for="genre">Select Your Genre</label>
+          <div class="dropdown">
+          <label class="genre-header" for="genre">Select Your Genre</label>
               <select name="genre" id="genre">
                 <option value="combined-print-fiction">Fiction</option>
                 <option value="combined-print-nonfiction">Nonfiction</option>
@@ -32,12 +29,14 @@
                 <option value="graphic-books-and-manga">Graphic Books and Manga</option>
                 <option value="race-and-civil-rights">Race and Civil Rights</option>
               </select>
-            </div>
-            <button id="gacha" data="GACHA"></button>
-            <div class="reveal" id="reveal"> <!-- make a div; hide and replace, js + css-->
+          </div>
+          <div id="spin">
+          </div>
+          <button id="gacha" data="GACHA"></button>
+          <div class="reveal" id="reveal"> <!-- make a div; hide and replace, js + css-->
                 <div class="reveal-container">
-                  <div class="bookcover-canvas" id="bookcover-canvas">
-                      <img src="" alt="A rotating 3D book cover">
+                  <div class="bookcover" id="bookcover">
+                      <img id="bookcover-img" src="" alt="A book cover"/>
                   </div>  
                   <div class="text">
                     <h1 id="rank"></h1>
@@ -46,17 +45,17 @@
                     <p id="description"></p>
                   </div>
                 </div>
-            </div>
-              <!-- <button id="result" data="Check Result"></button> backup plan, don't need this right now. Has related css codes, too. take care of them later. --> 
+          </div>
         </div>
-        <!-- <button id="result" data="Check Result"></button> backup plan, don't need this right now. Has related css codes, too. take care of them later. --> 
     </div>
     <div class="footer">
       <span>Made by danyiz</span>
       <span>Have fun with your gacha!</span>
     </div>
+    <script type="module" src="animation.js" defer></script>
+    <script type="module" src="result.js" defer></script>
+    <script type="module" src="three.js" defer></script>
+    <!-- <script type="module" src="p5.js" defer></script> -->
     <!-- <script type="module" src="/script.js"></script> -->
-    <script type="module" src="/animation.js" defer></script>
-    <script type="module" src="/result-p5.js" defer></script>
   </body>
 </html>
